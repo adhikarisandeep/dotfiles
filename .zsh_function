@@ -1,0 +1,21 @@
+# vack : Recursively searches for file and opens it in vim if found
+vack()
+{
+  vim $(ack -g $@)
+}
+
+# Run this in your shell to start using `hub` as `git`:
+# function git(){hub "$@"}
+
+# Use Ruby to share the current dir via a web server running on port 3000
+# function rushare()
+# {
+#  ruby -rwebrick -e"s = WEBrick::HTTPServer.new(:Port => 3000, :DocumentRoot => Dir.pwd); trap('INT') { s.shutdown }; s.start"
+# }
+
+# Make dir and then cd to it
+function mkcd()
+{
+  mkdir -p "$*"
+  cd "$*"
+}

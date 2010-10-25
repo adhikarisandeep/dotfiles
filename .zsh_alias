@@ -1,0 +1,34 @@
+# Aliases # 
+alias la='ls -Ahl -G'
+alias ls='ls -G'
+alias ll='ls -hl'
+alias rm='rm -i'
+alias rd='rm -R'
+alias cd..='cd ..'
+
+alias grep='grep --color'
+alias ruby='ruby -w'
+alias mv='nocorrect mv'              # no spelling correction for mv
+alias cp='nocorrect cp'              # no spelling correction for cp
+alias mkdir='nocorrect mkdir'        # no spelling correction for mkdir
+alias less='less -N'                 # display line numbers by default
+alias m=more
+alias today='cat /usr/share/calendar/calendar* | grep `date +"%m/%d"`'
+
+if ls -F --color=auto >&/dev/null; then
+    alias ls="ls --color=auto -G"
+else
+    alias ls="ls -G"
+fi
+
+# Suffix aliases #
+alias -s rb=vim
+alias -s py=vim
+alias -s c=vim
+alias -s cpp=vim
+alias -s chm=xchm
+alias -s pdf=evince
+alias -s ps=evince
+
+# Don't correct 'gist' -> 'git' if it exists in /bin #
+[[ (-f /bin/gist) ]] && alias gist='nocorrect gist'
